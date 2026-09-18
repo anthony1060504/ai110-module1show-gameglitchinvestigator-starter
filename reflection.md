@@ -8,16 +8,19 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
+On my first session, I immediately experienced an issue where my hint was always "Go LOWER!" regardless of the answer, even if I guessed the lowest bound (1). I was unable to successfully guess the number. On Normal Difficulty I expected to have 8 attempts, but on my 7th attempt I received a "GAME OVER! ...". When I attempted a start a new game, the "GAME OVER! ..." message remained despite receiving new attempts. When I tried to enter a guess on my second session after starting a new game, a guess was failed to be accepted and the game stopped working.
+
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
-
+| Guessed 1| Expected Go HIGHER! | Got Go LOWER! |  "None" |
+| Guessed 1 | Invalid Input or Go HIGHER!| Got Go LOWER! | "None" |
+| Started New Game | New Game Started | Unable to Guess | "None" |
+| Any Guess | Go HIGHER! or Go LOWER! | Only Go LOWER! | "None" |
+| Used 7 Attempts on Normal Difficulty | Expected 8th Attempt | Got GAME OVER! | "None"
 ---
 
 ## 2. How did you use AI as a teammate?
@@ -25,6 +28,8 @@ Document at least 3 bugs you found. Add rows as needed.
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
+
+I utilized Gopilot as my AI Tool.
 
 ---
 
