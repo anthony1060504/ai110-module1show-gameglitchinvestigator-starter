@@ -11,7 +11,7 @@ def parse_guess(raw: str):
     """
     raise NotImplementedError("Refactor this function from app.py into logic_utils.py")
 
-
+# FIXME: check_guess function was moved from app.py to logic_utils.py using agent mode.
 def check_guess(guess, secret):
     """
     Compare guess to secret and return (outcome, message).
@@ -21,7 +21,7 @@ def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
 
-# FIXME: Fixed the check_guess function properly displaying the hint messages for guesses that are too high or too low, and handling type errors correctly using agent mode.
+# FIXME: Fixed the check_guess function properly displaying the hint messages for guesses that are too high or too low, and handling type errors correctly using ask mode to locate the problem, then agent to implement.
     try:
         if guess > secret:
             return "Too High", "📉 Go LOWER!"
@@ -36,6 +36,21 @@ def check_guess(guess, secret):
         return "Too Low", "📈 Go HIGHER!"
 
 
+# FIXME: update_score function was moved from app.py to logic_utils.py using agent mode.
 def update_score(current_score: int, outcome: str, attempt_number: int):
     """Update score based on outcome and attempt number."""
-    raise NotImplementedError("Refactor this function from app.py into logic_utils.py")
+    if outcome == "Win":
+        points = 100 - 10 * (attempt_number + 1)
+        if points < 10:
+            points = 10
+        return current_score + points
+
+    if outcome == "Too High":
+        if attempt_number % 2 == 0:
+            return current_score + 5
+        return current_score - 5
+
+    if outcome == "Too Low":
+        return current_score - 5
+
+    return current_score
