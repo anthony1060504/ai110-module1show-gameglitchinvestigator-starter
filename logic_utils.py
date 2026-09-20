@@ -1,6 +1,13 @@
+# FIXME: get_range_for_difficulty function was moved from app.py to logic_utils.py using agent mode.
 def get_range_for_difficulty(difficulty: str):
     """Return (low, high) inclusive range for a given difficulty."""
-    raise NotImplementedError("Refactor this function from app.py into logic_utils.py")
+    if difficulty == "Easy":
+        return 1, 20
+    if difficulty == "Normal":
+        return 1, 100
+    if difficulty == "Hard":
+        return 1, 50
+    return 1, 100
 
 
 # FIXME: parse_guess function was moved from app.py to logic_utils.py using agent mode.
