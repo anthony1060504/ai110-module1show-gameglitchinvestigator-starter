@@ -25,8 +25,10 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
+- [The game's purpose is for a user to enter an integer in attempt to guess and match the randmoly generated secret number. There are difficulty setting that effect the secret number ranges and the amount of attempts for guesses, and there is also a "show hint" option which will tell the user if their guess is higher or lower thent he secret number.] Describe the game's purpose.
+
+- [I primarily experienced bugs with the  ] Detail which bugs you found.
+
 - [ ] Explain what fixes you applied.
 
 ## 📸 Demo Walkthrough
@@ -46,8 +48,15 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 ```
 # Paste your pytest output here, e.g.:
 # pytest tests/
-# ========================= X passed in 0.XXs =========================
-```
+# ==================================================================== test session starts =====================================================================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\antho\ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.15.1
+collected 1 item                                                                                                                                              
+
+tests\test_game_logic.py .                                                                                                                              [100%]
+
+===================================================================== 1 passed in 0.02s ======================================================================
 
 ## 🚀 Stretch Features
 
