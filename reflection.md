@@ -17,10 +17,11 @@ Document at least 3 bugs you found. Add rows as needed.
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
 | Guessed 1| Expected Go HIGHER! | Got Go LOWER! |  "None" |
-| Guessed 1 | Invalid Input or Go HIGHER!| Got Go LOWER! | "None" |
+| Guessed 0 | Invalid Input or Go HIGHER!| Got Go LOWER! | "None" |
 | Started New Game | New Game Started | Unable to Guess | "None" |
 | Any Guess | Go HIGHER! or Go LOWER! | Only Go LOWER! | "None" |
 | Used 7 Attempts on Normal Difficulty | Expected 8th Attempt | Got GAME OVER! | "None"
+| Normal Difficulty Has Hard Difficulty Stats | Expected 8th Attempt | Got GAME OVER! | "None"
 ---
 
 ## 2. How did you use AI as a teammate?
